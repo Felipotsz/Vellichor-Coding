@@ -1,7 +1,4 @@
-// index.js - atualizado com dark mode como padrão
-
 // ───── TEMA (DARK/LIGHT MODE) ─────
-// AGORA: dark é o padrão, light é alternativo
 
 function getTheme() { 
   const stored = localStorage.getItem('vc-theme');
@@ -16,8 +13,6 @@ function applyTheme(theme) {
   if (theme === 'light') {
     document.documentElement.classList.add('light');
   } else {
-    // dark é o padrão, então não precisamos de classe .dark (ou podemos manter para consistência)
-    // Para compatibilidade, adicionamos classe dark também
     document.documentElement.classList.add('dark');
   }
   
@@ -25,8 +20,6 @@ function applyTheme(theme) {
   
   const themeBtn = document.querySelector('.theme-btn');
   if (themeBtn) {
-    // Em dark mode (padrão), mostrar ícone de sol (para mudar para light)
-    // Em light mode, mostrar ícone de lua (para mudar para dark)
     themeBtn.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     
     themeBtn.classList.add('theme-btn-transition');
@@ -82,36 +75,36 @@ function createRippleEffect(element) {
   applyTheme(getTheme());
 })();
 
-// ───── DADOS DE NAVEGAÇÃO ───── (mantido igual)
+// ───── DADOS DE NAVEGAÇÃO ─────
 
 const NAV_LINKS = [
-  { label: 'Início',    href: '../index.html', icon: 'fas fa-home' },
-  { label: 'Serviços',  href: '../services/services.html', icon: 'fas fa-cogs' },
-  { label: 'Portfólio', href: '../portfolio/portfolio.html', icon: 'fas fa-briefcase' },
+  { label: 'Início',    href: '/index.html', icon: 'fas fa-home' },
+  { label: 'Serviços',  href: '/services/services.html', icon: 'fas fa-cogs' },
+  { label: 'Portfólio', href: '/portfolio/portfolio.html', icon: 'fas fa-briefcase' },
   { 
     label: 'Sobre', 
     icon: 'fas fa-info-circle',
     dropdown: [
-      { label: 'Sobre Nós', href: '../about-us/about-us.html', icon: 'fas fa-book-open' },
-      { label: 'Nossa Equipe',    href: '../team/team.html', icon: 'fas fa-users' }
+      { label: 'Sobre Nós', href: '/about-us/about-us.html', icon: 'fas fa-book-open' },
+      { label: 'Nossa Equipe',    href: '/team/team.html', icon: 'fas fa-users' }
     ]
   },
-  { label: 'Contato',   href: '../contact/contact.html', icon: 'fas fa-envelope' },
+  { label: 'Contato',   href: '/contact/contact.html', icon: 'fas fa-envelope' },
 ];
 
 const FOOTER_LINKS = [
-  { label: 'Serviços',  href: '../services/services.html' },
-  { label: 'Soluções',  href: '../solucoes/solucoes.html' },
-  { label: 'Portfólio', href: '../portfolio/portfolio.html' },
-  { label: 'Sobre',     href: '../about-us/about-us.html' },
-  { label: 'Equipe',    href: '../team/team.html' },
-  { label: 'Contato',   href: '../contact/contact.html' },
+  { label: 'Serviços',  href: '/services/services.html' },
+  { label: 'Soluções',  href: '/solucoes/solucoes.html' },
+  { label: 'Portfólio', href: '/portfolio/portfolio.html' },
+  { label: 'Sobre',     href: '/about-us/about-us.html' },
+  { label: 'Equipe',    href: '/team/team.html' },
+  { label: 'Contato',   href: '/contact/contact.html' },
 ];
 
 const LEGAL_LINKS = [
-  { label: 'Política de Privacidade', href: '../privacidade/privacidade.html' },
-  { label: 'Termos de Uso',           href: '../termos/termos.html' },
-  { label: 'Missão e Valores',        href: '../missao/missao.html' },
+  { label: 'Política de Privacidade', href: '/privacidade/privacidade.html' },
+  { label: 'Termos de Uso',           href: '/termos/termos.html' },
+  { label: 'Missão e Valores',        href: '/missao/missao.html' },
 ];
 
 // ───── RENDERIZAÇÃO DA NAVBAR ─────
@@ -170,13 +163,13 @@ function renderNavbar() {
   return `
     <header class="navbar">
       <div class="navbar-container">
-        <a href="../index.html" class="navbar-brand">
-          <img src="/src/vellichor-coding-logo.png" alt="Vellichor Coding" class="navbar-logo">
+        <a href="/index.html" class="navbar-brand">
+          <img src="src/vellichor-coding-logo.png" alt="Vellichor Coding" class="navbar-logo">
           <span class="navbar-brand-text">Vellichor Coding</span>
         </a>
         <nav class="navbar-nav">${desktopLinks}</nav>
         <div class="navbar-actions">
-          <a href="../contact/contact.html" class="btn-nav-contact">
+          <a href="/contact/contact.html" class="btn-nav-contact">
             <i class="fas fa-comment"></i>
             <span>Entre em Contato</span>
           </a>
@@ -195,7 +188,7 @@ function renderNavbar() {
         <div class="container">
           ${mobileLinks}
           <div class="mobile-menu-contact">
-            <a href="../contato/contato.html" class="btn-nav-contact">
+            <a href="/contact/contact.html" class="btn-nav-contact">
               <i class="fas fa-comment"></i>
               <span>Entre em Contato</span>
             </a>
@@ -206,7 +199,7 @@ function renderNavbar() {
   `;
 }
 
-// ───── RENDERIZAÇÃO DO FOOTER ───── (mantido igual)
+// ───── RENDERIZAÇÃO DO FOOTER ─────
 
 function renderFooter() {
   return `
@@ -216,7 +209,7 @@ function renderFooter() {
           <!-- Coluna 1 - Marca -->
           <div class="footer-brand">
             <div class="footer-title">
-              <img src="/src/vellichor-coding-logo.png" alt="Vellichor Coding" class="footer-logo">
+              <img src="src/vellichor-coding-logo.png" alt="Vellichor Coding" class="footer-logo">
               <span>Vellichor Coding</span>
             </div>
             <div class="footer-divider"></div>
@@ -300,9 +293,9 @@ function renderFooter() {
               Software construído com conhecimento e precisão
             </div>
             <div class="footer-legal">
-              <a href="../privacidade/privacidade.html">Privacidade</a>
-              <a href="../termos/termos.html">Termos</a>
-              <a href="../acessibilidade/acessibilidade.html">Acessibilidade</a>
+              <a href="/privacidade/privacidade.html">Privacidade</a>
+              <a href="/termos/termos.html">Termos</a>
+              <a href="/acessibilidade/acessibilidade.html">Acessibilidade</a>
             </div>
           </div>
         </div>
