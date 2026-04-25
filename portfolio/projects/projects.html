@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto | Vellichor Coding</title>
+  <meta name="description" content="Detalhes do projeto - Um manuscrito digital criado pelo Scriptorium Vellichor.">
+  <meta name="keywords" content="projeto, Vellichor Coding, portfolio, desenvolvimento">
+  <meta name="author" content="Vellichor Coding">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Lightbox Gallery -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/components/components.css">
+  <link rel="stylesheet" href="/portfolio/projects/projects.css">
+
+  <!-- JavaScript -->
+  <script src="/index.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js" defer></script>
+  <script src="/portfolio/projects/projects.js" defer></script>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- ───── HERO DO PROJETO ───── -->
+  <section class="project-hero">
+    <div class="project-hero-bg"></div>
+    <div class="project-hero-overlay"></div>
+    <div class="container">
+      <div class="project-hero-content" data-aos="fade-up">
+        <a href="../portfolio/portfolio.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Voltar ao Catálogo
+        </a>
+        <span class="project-category" id="projectCategory"></span>
+        <h1 id="projectTitle"></h1>
+        <div class="project-hero-divider">
+          <span></span>
+          <i class="fas fa-quote-left"></i>
+          <span></span>
+        </div>
+        <p class="project-hero-subtitle" id="projectSubtitle"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── CONTEÚDO DO PROJETO ───── -->
+  <section class="project-content">
+    <div class="container">
+      <div class="content-grid">
+        <!-- Coluna Principal -->
+        <div class="project-main" data-aos="fade-right">
+          <!-- Sobre o Projeto -->
+          <div class="project-section">
+            <h2>Sobre este <span class="text-accent">Manuscrito</span></h2>
+            <div class="section-divider">
+              <span></span>
+              <i class="fas fa-feather-alt"></i>
+              <span></span>
+            </div>
+            <p class="project-full-description" id="projectFullDescription"></p>
+          </div>
+
+          <!-- Características -->
+          <div class="project-section">
+            <h2>Características <span class="text-accent">da Obra</span></h2>
+            <div class="section-divider">
+              <span></span>
+              <i class="fas fa-feather-alt"></i>
+              <span></span>
+            </div>
+            <div class="features-grid" id="projectFeatures"></div>
+          </div>
+
+          <!-- Tecnologias Utilizadas -->
+          <div class="project-section">
+            <h2>Ferramentas & <span class="text-accent">Tecnologias</span></h2>
+            <div class="section-divider">
+              <span></span>
+              <i class="fas fa-feather-alt"></i>
+              <span></span>
+            </div>
+            <div class="tech-stack" id="projectTech"></div>
+          </div>
+
+          <!-- Galeria de Imagens -->
+          <div class="project-section" id="gallerySection" style="display: none;">
+            <h2>Iluminuras <span class="text-accent">do Projeto</span></h2>
+            <div class="section-divider">
+              <span></span>
+              <i class="fas fa-feather-alt"></i>
+              <span></span>
+            </div>
+            <div class="gallery-grid" id="projectGallery"></div>
+          </div>
+
+          <!-- Vídeo -->
+          <div class="project-section" id="videoSection" style="display: none;">
+            <h2>Demonstração <span class="text-accent">em Movimento</span></h2>
+            <div class="section-divider">
+              <span></span>
+              <i class="fas fa-feather-alt"></i>
+              <span></span>
+            </div>
+            <div class="video-container" id="projectVideo"></div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="project-sidebar" data-aos="fade-left">
+          <div class="info-card">
+            <h3>Ficha Técnica</h3>
+            <div class="info-divider"></div>
+            <div class="info-item">
+              <span class="info-label">Cliente:</span>
+              <span class="info-value" id="projectClient"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Ano:</span>
+              <span class="info-value" id="projectYear"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Duração:</span>
+              <span class="info-value" id="projectDuration"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Categoria:</span>
+              <span class="info-value" id="projectCategorySidebar"></span>
+            </div>
+          </div>
+
+          <div class="action-card">
+            <i class="fas fa-feather-alt"></i>
+            <h4>Interessado em uma obra similar?</h4>
+            <p>Entre em contato e descubra como podemos criar um manuscrito digital sob medida para você.</p>
+            <a href="../contato/contato.html" class="btn-action">
+              <i class="fas fa-envelope"></i> Solicitar Proposta
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── NAVEGAÇÃO ENTRE PROJETOS ───── -->
+  <section class="project-navigation">
+    <div class="container">
+      <div class="nav-links" id="projectNav"></div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 600,
+      offset: 100
+    });
+  </script>
+</body>
+
+</html>

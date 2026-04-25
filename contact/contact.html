@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Vellichor Coding</title>
+    <meta name="description"
+        content="Envie sua mensagem ao nosso scriptorium. Inicie uma correspondência e transforme sua ideia em um manuscrito digital.">
+    <meta name="keywords" content="contato, Vellichor Coding, desenvolvimento de software, orçamento">
+    <meta name="author" content="Vellichor Coding">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/components/components.css">
+    <link rel="stylesheet" href="/contact/contact.css">
+
+    <!-- JavaScript -->
+    <script src="/index.js" defer></script>
+    <script src="/contact/contact.js" defer></script>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- ───── HERO DA PÁGINA ───── -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content" data-aos="fade-up">
+                <span class="label-accent">
+                    <i class="fas fa-feather-alt"></i> Epistolae
+                </span>
+                <h1>Inicie uma <span class="text-accent">Correspondência</span></h1>
+                <div class="page-hero-divider">
+                    <span></span>
+                    <i class="fas fa-quote-left"></i>
+                    <span></span>
+                </div>
+                <p class="page-hero-subtitle">
+                    Toda grande obra começa com uma conversa. Envie sua mensagem e juntos
+                    escreveremos o próximo capítulo da sua história digital.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── SEÇÃO DE CONTATO ───── -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Coluna Esquerda - Formulário -->
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <div class="scroll-top"></div>
+                    <div class="contact-scroll">
+                        <div class="scroll-decoration">
+                            <i class="fas fa-feather-alt"></i>
+                            <span>Folium</span>
+                        </div>
+                        <h2>Vossa Mensagem</h2>
+                        <div class="contact-divider">
+                            <span></span>
+                            <i class="fas fa-quote-left"></i>
+                            <span></span>
+                        </div>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        <i class="fas fa-user"></i>
+                                        <span>Nome Completo</span>
+                                    </label>
+                                    <input type="text" id="nome" name="nome" class="form-input"
+                                        placeholder="Seu Nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>E-mail</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="correspondencia@exemplo.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span>Telefone</span>
+                                    </label>
+                                    <input type="tel" id="telefone" name="telefone" class="form-input"
+                                        placeholder="(00) 00000-0000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        <i class="fas fa-tag"></i>
+                                        <span>Assunto</span>
+                                    </label>
+                                    <select id="assunto" name="assunto" class="form-select" required>
+                                        <option value="">Selecione o assunto</option>
+                                        <option value="orcamento">Solicitar Orçamento</option>
+                                        <option value="duvida">Dúvidas sobre Serviços</option>
+                                        <option value="parceria">Proposta de Parceria</option>
+                                        <option value="suporte">Suporte Técnico</option>
+                                        <option value="outro">Outro Assunto</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-quote-right"></i>
+                                    <span>Mensagem</span>
+                                </label>
+                                <textarea id="mensagem" name="mensagem" class="form-textarea" rows="6"
+                                    placeholder="Descreva sua ideia, dúvida ou proposta. Cada palavra é importante para nós."
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="consentimento" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">Aceito receber correspondências e declaro estar ciente
+                                        da <a href="../privacidade/privacidade.html">Política de Privacidade</a></span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-feather-alt"></i>
+                                <span>Enviar Mensagem</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="scroll-bottom"></div>
+                </div>
+
+                <!-- Coluna Direita - Informações -->
+                <div class="contact-info-wrapper" data-aos="fade-left">
+                    <div class="info-scroll">
+                        <div class="info-decoration">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Nossa Localização</h3>
+                        <div class="info-divider">
+                            <span></span>
+                            <i class="fas fa-feather-alt"></i>
+                            <span></span>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-pin"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Sede da Vellichor Coding</h4>
+                                <p>São Paulo, Brasil</p>
+                                <p class="info-detail">Rua dos Melancôlicos, 211 — Pinheiros</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Correspondência Eletrônica</h4>
+                                <p>vellichorcoding@gmail.com</p>
+                                <p class="info-detail">Resposta em até 24 horas</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Mensagem Direta</h4>
+                                <p>(15) 99634-9621</p>
+                                <p class="info-detail">Atendimento: Segunda à Sexta, 9h às 18h</p>
+                            </div>
+                        </div>
+
+                        <div class="info-seal">
+                            <i class="fas fa-stamp"></i>
+                            <span>Resposta em até 24 horas úteis</span>
+                        </div>
+                    </div>
+
+                    <!-- Selo de autenticidade -->
+                    <div class="info-authenticity">
+                        <i class="fas fa-circle"></i>
+                        <span>Documento autenticado pela Vellichor Coding</span>
+                        <i class="fas fa-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── FAQ ───── -->
+    <section class="contact-faq">
+        <div class="container">
+            <div class="faq-quick" data-aos="fade-up">
+                <div class="faq-quick-header">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Dúvidas Comuns</span>
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <div class="faq-quick-grid">
+                    <div class="faq-quick-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Qual o prazo médio de resposta?</span>
+                        <p>Nossa correspondência é respondida em até 24 horas úteis.</p>
+                    </div>
+                    <div class="faq-quick-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Meus dados estão seguros?</span>
+                        <p>Sim, seguimos rigorosas práticas de proteção de dados.</p>
+                    </div>
+                    <div class="faq-quick-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Atendem fora do Brasil?</span>
+                        <p>Sim, atendemos clientes em todo o mundo remotamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 600,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>

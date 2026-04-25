@@ -1,0 +1,600 @@
+/* equipe.css - Página de Equipe Estilo Iluminura */
+
+/* ============================================
+   PAGE HERO - SCRIPTORIUM
+   ============================================ */
+
+.page-hero {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg,
+    #E8DFD0 0%,
+    #D4C5A9 50%,
+    #8B7355 100%);
+}
+
+.dark .page-hero {
+  background: linear-gradient(135deg,
+    #1A1510 0%,
+    #2A221C 50%,
+    #3D2B1F 100%);
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.page-hero-content .label-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  color: var(--accent-light);
+  margin-bottom: 1.5rem;
+}
+
+.page-hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1rem;
+}
+
+.page-hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem auto;
+  width: 120px;
+}
+
+.page-hero-divider span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.page-hero-divider i {
+  color: var(--accent);
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.page-hero-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+}
+
+/* ============================================
+   INTRODUÇÃO DA EQUIPE
+   ============================================ */
+
+.team-intro {
+  padding: 4rem 0;
+  background: var(--bg);
+}
+
+.intro-scroll {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+}
+
+.intro-quote {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.intro-quote i {
+  color: var(--accent);
+  opacity: 0.4;
+  font-size: 1.25rem;
+}
+
+.intro-quote p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--muted-fg);
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.intro-seal {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+
+.intro-seal i {
+  font-size: 0.8rem;
+}
+
+/* ============================================
+   EQUIPE SECTION
+   ============================================ */
+
+.team-section {
+  padding: 4rem 0;
+  background: var(--bg);
+}
+
+.team-section.senior {
+  background: var(--card);
+}
+
+.team-section.junior {
+  background: var(--bg);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header .label-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(122, 107, 94, 0.08);
+  border-radius: 100px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--h2-color);
+  font-family: 'Cinzel', serif;
+}
+
+.section-subtitle {
+  font-size: 0.875rem;
+  color: var(--muted-fg);
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+}
+
+/* Grid de Membros */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card de Membro - Estilo Iluminura */
+.member-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  border: 1px solid var(--card-border);
+  position: relative;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.member-card:hover::before {
+  transform: scaleX(1);
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Avatar */
+.member-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+
+.avatar-frame {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(122, 107, 94, 0.15), 
+    rgba(122, 107, 94, 0.05)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--accent);
+  transition: all var(--transition-base);
+}
+
+.member-card:hover .avatar-frame {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+}
+
+.avatar-initials {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: all var(--transition-base);
+}
+
+.member-card:hover .avatar-initials {
+  color: var(--accent-fg);
+}
+
+/* Selo decorativo */
+.member-seal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  background: rgba(212, 165, 58, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--transition-base);
+}
+
+.member-card:hover .member-seal {
+  opacity: 1;
+}
+
+.member-seal i {
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+/* Nome e Cargo */
+.member-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 0.25rem;
+}
+
+.member-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(122, 107, 94, 0.08);
+  border-radius: 100px;
+}
+
+/* Divisor */
+.member-divider {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin: 0.75rem auto;
+}
+
+/* Bio */
+.member-bio {
+  font-size: 0.8125rem;
+  color: var(--muted-fg);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: 'Crimson Text', serif;
+}
+
+/* Especialidades */
+.member-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.specialty-tag {
+  font-size: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--bg);
+  border-radius: 100px;
+  color: var(--muted-fg);
+  border: 1px solid var(--border);
+  transition: all var(--transition-fast);
+}
+
+.member-card:hover .specialty-tag {
+  background: rgba(212, 165, 58, 0.1);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ============================================
+   CULTURA E VALORES
+   ============================================ */
+
+.culture-section {
+  padding: 5rem 0;
+  background: var(--card);
+  position: relative;
+}
+
+.culture-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.culture-scroll {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.culture-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.culture-header i {
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .culture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.culture-item {
+  text-align: center;
+  padding: 1.25rem;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: all var(--transition-base);
+}
+
+.culture-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.culture-item i {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.culture-item h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--fg);
+}
+
+.culture-item p {
+  font-size: 0.75rem;
+  color: var(--muted-fg);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.culture-seal {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-fg);
+}
+
+.culture-seal i {
+  font-size: 0.4rem;
+  color: var(--accent);
+  opacity: 0.5;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 3rem 0;
+  }
+  
+  .team-grid {
+    gap: 1.5rem;
+  }
+  
+  .member-card {
+    padding: 1.5rem;
+  }
+  
+  .member-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .avatar-initials {
+    font-size: 1.5rem;
+  }
+  
+  .member-name {
+    font-size: 1rem;
+  }
+  
+  .intro-quote {
+    flex-direction: column;
+  }
+  
+  .intro-quote i:first-child {
+    align-self: flex-start;
+  }
+  
+  .intro-quote i:last-child {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero-content {
+    padding: 2rem 0;
+  }
+  
+  .page-hero-subtitle {
+    font-size: 0.875rem;
+  }
+  
+  .intro-scroll {
+    padding: 1.5rem;
+  }
+  
+  .intro-quote p {
+    font-size: 0.875rem;
+  }
+  
+  .culture-scroll {
+    padding: 1rem;
+  }
+  
+  .culture-header {
+    font-size: 0.75rem;
+  }
+}
+
+/* Dark Mode */
+.dark .member-card {
+  background: var(--card);
+}
+
+.dark .specialty-tag {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .culture-item {
+  background: var(--card);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .member-card:hover {
+    transform: none;
+  }
+  
+  .culture-item:hover {
+    transform: none;
+  }
+}

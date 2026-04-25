@@ -1,0 +1,488 @@
+/* portfolio.css - Página de Portfólio Estilo Galeria */
+
+/* ============================================
+   PAGE HERO - BIBLIOTHECA
+   ============================================ */
+
+.page-hero {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg,
+    #E8DFD0 0%,
+    #D4C5A9 50%,
+    #8B7355 100%);
+}
+
+.dark .page-hero {
+  background: linear-gradient(135deg,
+    #1A1510 0%,
+    #2A221C 50%,
+    #3D2B1F 100%);
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.page-hero-content .label-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  color: var(--accent-light);
+  margin-bottom: 1.5rem;
+}
+
+.page-hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1rem;
+}
+
+.page-hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem auto;
+  width: 120px;
+}
+
+.page-hero-divider span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.page-hero-divider i {
+  color: var(--accent);
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.page-hero-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+}
+
+/* ============================================
+   FILTROS
+   ============================================ */
+
+.filters-section {
+  padding: 2rem 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.filters-scroll {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.filter-header i {
+  font-size: 0.6rem;
+  opacity: 0.5;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--muted-fg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+/* ============================================
+   GALERIA DE PROJETOS
+   ============================================ */
+
+.portfolio-gallery {
+  padding: 5rem 0;
+  background: var(--card);
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.gallery-header .label-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(122, 107, 94, 0.08);
+  border-radius: 100px;
+}
+
+.gallery-header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--h2-color);
+  font-family: 'Cinzel', serif;
+}
+
+.gallery-subtitle {
+  font-size: 0.875rem;
+  color: var(--muted-fg);
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+}
+
+/* Grid de Projetos */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card de Projeto - Estilo Manuscrito */
+.project-card {
+  background: var(--bg);
+  border-radius: 8px 16px 16px 8px;
+  transition: all var(--transition-base);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(135deg, 
+    var(--accent-dark) 0%,
+    var(--accent) 50%,
+    var(--accent-dark) 100%);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, 
+    rgba(41, 46, 30, 0.9),
+    rgba(122, 107, 94, 0.8));
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-placeholder i {
+  font-size: 4rem;
+  color: var(--accent);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay i {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.project-overlay span {
+  font-size: 0.7rem;
+  color: white;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(212, 165, 58, 0.1);
+  border-radius: 100px;
+}
+
+.project-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--fg);
+}
+
+.project-divider {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin: 0.5rem 0;
+}
+
+.project-description {
+  font-size: 0.8125rem;
+  color: var(--muted-fg);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: 'Crimson Text', serif;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  font-size: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(212, 165, 58, 0.08);
+  border-radius: 100px;
+  color: var(--accent);
+}
+
+/* ============================================
+   COLOPHON
+   ============================================ */
+
+.portfolio-colophon {
+  padding: 4rem 0;
+  background: var(--bg);
+}
+
+.colophon-scroll {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.colophon-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.colophon-header i {
+  font-size: 0.4rem;
+  opacity: 0.5;
+}
+
+.colophon-text {
+  font-size: 0.875rem;
+  color: var(--muted-fg);
+  line-height: 1.7;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.colophon-seal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  color: var(--accent);
+}
+
+.colophon-seal i {
+  font-size: 0.7rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .page-hero-content {
+    padding: 2rem 0;
+  }
+  
+  .page-hero-subtitle {
+    font-size: 0.875rem;
+  }
+  
+  .portfolio-gallery {
+    padding: 3rem 0;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .filter-buttons {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .project-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+  
+  .colophon-scroll {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+}
+
+/* Dark Mode */
+.dark .project-card {
+  background: var(--card);
+}
+
+.dark .colophon-scroll {
+  background: var(--card);
+}

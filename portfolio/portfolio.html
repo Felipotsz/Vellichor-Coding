@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Vellichor Coding</title>
+  <meta name="description" content="Conheça nosso acervo de obras digitais. Manuscritos únicos criados com excelência e precisão.">
+  <meta name="keywords" content="portfólio, projetos, Vellichor Coding, desenvolvimento, software">
+  <meta name="author" content="Vellichor Coding">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/components/components.css">
+  <link rel="stylesheet" href="/portfolio/portfolio.css">
+
+  <!-- JavaScript -->
+  <script src="/index.js" defer></script>
+  <script src="/portfolio/portfolio.js" defer></script>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- ───── HERO DA PÁGINA ───── -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container">
+      <div class="page-hero-content" data-aos="fade-up">
+        <span class="label-accent">
+          <i class="fas fa-landmark"></i> Bibliotheca
+        </span>
+        <h1>Nosso <span class="text-accent">Acervo</span> de Obras</h1>
+        <div class="page-hero-divider">
+          <span></span>
+          <i class="fas fa-quote-left"></i>
+          <span></span>
+        </div>
+        <p class="page-hero-subtitle">
+          Uma coleção de manuscritos digitais cuidadosamente elaborados. Cada projeto é uma obra única 
+          que conta sua própria história.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FILTROS ───── -->
+  <section class="filters-section">
+    <div class="container">
+      <div class="filters-scroll" data-aos="fade-up">
+        <div class="filter-header">
+          <i class="fas fa-filter"></i>
+          <span>Filtrar por categoria</span>
+          <i class="fas fa-filter"></i>
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Todos os Manuscritos</button>
+          <button class="filter-btn" data-filter="web">Sistemas Web</button>
+          <button class="filter-btn" data-filter="saas">Plataformas SaaS</button>
+          <button class="filter-btn" data-filter="site">Websites</button>
+          <button class="filter-btn" data-filter="mobile">Aplicativos Mobile</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── GALERIA DE PROJETOS ───── -->
+  <section class="portfolio-gallery">
+    <div class="container">
+      <div class="gallery-header" data-aos="fade-up">
+        <span class="label-accent">
+          <i class="fas fa-crown"></i> Manuscripta Selecta
+        </span>
+        <h2>Obras <span class="text-accent">Iluminadas</span></h2>
+        <p class="gallery-subtitle">
+          Clique sobre qualquer manuscrito para folhear suas páginas e conhecer cada detalhe
+        </p>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- ───── COLOPHON ───── -->
+  <section class="portfolio-colophon">
+    <div class="container">
+      <div class="colophon-scroll" data-aos="fade-up">
+        <div class="colophon-header">
+          <i class="fas fa-circle"></i>
+          <span>Colophon</span>
+          <i class="fas fa-circle"></i>
+        </div>
+        <p class="colophon-text">
+          Este catálogo reúne as principais obras realizadas por nosso scriptorium. 
+          Cada projeto é um testemunho do nosso compromisso com a excelência e a elegância na escrita digital.
+        </p>
+        <div class="colophon-seal">
+          <i class="fas fa-stamp"></i>
+          <span>Catalogo Authenticum — MMXXIV</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 600,
+      offset: 100
+    });
+  </script>
+</body>
+
+</html>
